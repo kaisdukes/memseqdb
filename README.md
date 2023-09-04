@@ -82,3 +82,12 @@ interface GraphLoader<T extends Graph<?, ?>> {
 
     T load();
 }
+
+## Deployment
+
+This repo is configured to deploy to GitHub packages, which requires a classic personal access token:
+
+```
+export GITHUB_TOKEN=...
+./deploy.sh
+```
