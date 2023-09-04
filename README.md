@@ -82,6 +82,7 @@ interface GraphLoader<T extends Graph<?, ?>> {
 
     T load();
 }
+```
 
 ## Deployment
 
