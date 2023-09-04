@@ -60,6 +60,10 @@ publishing {
         maven {
             name = 'GitHubPackages'
             url = uri("https://maven.pkg.github.com/kaisdukes/memseqdb")
+            credentials {
+                username = 'kaisdukes'
+                password = System.getenv("GITHUB_TOKEN")
+            }
         }
     }
 }
