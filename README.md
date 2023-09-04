@@ -31,7 +31,7 @@ var item = seq.getItem(5); // "abc"
 
 The generic `Seq2Seq` class represents a many-to-one mapping between two sequences (A and B), constructed from an `Iterable` of sequence numbers from sequence B. The sequence numbers from sequence A are inferred as 1 through to the length of the iterable, inclusive. `Seq2Seq` can be queried to return a range, using an O(1) lookup.
 
-```
+```java
 var aToB = new Seq2Seq(List.of(3, 8, 8, 12));
 var range = aToB.getRange(new SeqRange(2, 4));
 var minB = range.min(); // 8
@@ -40,7 +40,7 @@ var maxB = range.max(); // 12
 
 For mapping sparse sequences, the generic `SparseSeq2Seq` class translates sequence numbers using an O(1) lookup.
 
-```
+```java
 var aToB = new SparseSeq2Seq(List.of(
     new SeqPair(1, 3),
     new SeqPair(3, 6),
@@ -55,7 +55,7 @@ var b = aToB.getSequenceNumberB(3); // 6
 
 A generic `SeqGraphNode` represents a node in a directed graph, with outgoing edges arranged by sequence number. By convention, 'child nodes' refers to the nodes that are pointed to. To combine sequenced nodes with other node types, `SeqGraphNode` extends the `GraphNode` marker interface.
 
-```
+```java
 interface SeqGraphNode<T extends GraphNode> extends GraphNode {
     T getChild(int sequenceNumber);
     T[] children();
