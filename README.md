@@ -3,8 +3,8 @@
 MemSeqDB is a small, lightweight Java framework for building high-performance, immutable, in-memory graph databases of sequenced data. Sequenced data refers to a set of data elements arranged in a specific order, providing a meaningful sequence for storage and retrieval operations. The library guarantees O(1) lookup time for most operations (detailed below). There is only a single dependency, [fastutil](https://fastutil.di.unimi.it), to avoid autoboxing of integer sequence numbers and to optimize memory usage.
 
 ## Usage
- 
-MemSeqDB is a class library, and does not provide a full graph database out of the box. The library does however provide the necessary abstractions and interfaces for standardization of sequenced in-memory graphs. MemSeqDB is designed for systems that require high-speed, in-memory storage and retrieval of immutable sequenced data.
+
+MemSeqDB is designed for systems that require high-speed, in-memory storage and retrieval of immutable sequenced data. MemSeqDB is a class library, and does not provide a full graph database out of the box. The library does however provide the necessary abstractions and interfaces for standardization of sequenced in-memory graphs.
 
 All classes are immutable and are therefore thread-safe.
 
