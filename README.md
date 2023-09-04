@@ -86,7 +86,7 @@ interface GraphLoader<T extends Graph<?, ?>> {
 
 ## Deployment
 
-This repo is configured to deploy to GitHub packages, which requires a classic personal access token:
+This repo is configured to deploy to [GitHub packages](https://github.com/kaisdukes/memseqdb/packages), which requires a classic personal access token:
 
 ```bash
 export GITHUB_TOKEN=...
